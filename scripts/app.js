@@ -1,5 +1,6 @@
 window.onload = () => {
     addSubscriptions();
+    setSavedPreferences();
 }
 
 /**
@@ -21,4 +22,20 @@ const addSubscriptions = () => {
 const setColor = (event) => {
     document.documentElement.style.setProperty('--bckg', `hsl(${event.currentTarget.color}, 100%, 50%)`);
     document.querySelector(":root").style.setProperty('--text-color', `hsl(${event.currentTarget.color - 180}, 100%, 50%)`);
+    localStorage.setItem('background-color', event.currentTarget.color);
+}
+
+/**
+ * Used to extract saved preferences from local storage and set theme.
+ */
+const setSavedPreferences = () => {
+    if (localStorage.getItem('background-color')) {
+        // Create an object with event like structure so we can reuse the setColor function.
+        const preferredColor = {
+            currentTarget: {
+                color: localStorage.getItem('background-color')
+            }
+        };
+        setColor(preferredColor);
+    }
 }
