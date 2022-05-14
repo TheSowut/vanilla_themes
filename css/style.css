@@ -2,15 +2,26 @@
     margin: 0;
     padding: 0;
     border: 0;
+    font-family: 'Roboto', sans-serif;
 }
 
 :root {
-    --primary-button: 180;
-    --secondary-button: 90;
+    --primary-button: 220;
+    --secondary-button: 80;
     --accent-button: 270;
 
-    --bckg: #232627;
-    --text-color: #fff;
+    --bckg: hsl(195, 5%, 15%);
+    --text-color: hsl(0, 0%, 100%);
+}
+
+#reset-button {
+    position: absolute;
+    top: 0;
+    right: 5px;
+    font-size: 1.75em;
+    background: none;
+    color: var(--text-color);
+    cursor: pointer;
 }
 
 main {
@@ -35,7 +46,6 @@ main {
 }
 
 .container p {
-    font-family: 'Roboto', sans-serif;
     font-size: 2.5rem;
     text-align: center;
 }
