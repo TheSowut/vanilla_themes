@@ -4,4 +4,4 @@ Featuring *incredible*, ground-breaking, **innovative**, AI driven features like
 * Reloading the page and retaining your preferences.
 * Reseting theme to the initial state.
 
-..no seriosly that's about everything
+..no seriously that's about everything
