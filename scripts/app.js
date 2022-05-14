@@ -15,9 +15,10 @@ const addSubscriptions = () => {
 }
 
 /**
- * Used to change the background color of the page.
+ * Used to change the background & text colors of the page.
  * @param event
  */
 const setColor = (event) => {
-    document.documentElement.style.setProperty('--bckg', `hsl(${event.currentTarget.color}, 100%, 50%)`)
+    document.documentElement.style.setProperty('--bckg', `hsl(${event.currentTarget.color}, 100%, 50%)`);
+    document.querySelector(":root").style.setProperty('--text-color', `hsl(${event.currentTarget.color - 180}, 100%, 50%)`);
 }

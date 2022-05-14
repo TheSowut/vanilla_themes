@@ -6,16 +6,17 @@
 
 :root {
     --primary-button: 180;
-    --secondary-button: calc(var(--primary-button) - 90);
-    --accent-button: calc(var(--primary-button) + 90);
+    --secondary-button: 90;
+    --accent-button: 270;
 
-    --bckg: white;
+    --bckg: #232627;
+    --text-color: #fff;
 }
 
 main {
     background-color: var(--bckg);
     transition: 1s all;
-    /* color: white; */
+    color: var(--text-color);
     width: 100%;
     height: 100vh;
     display: flex;
