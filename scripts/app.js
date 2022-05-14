@@ -28,6 +28,7 @@ const setColor = (event) => {
     document.querySelector(':root').style.setProperty('--bckg', `hsl(${event.currentTarget.color}, 100%, 50%)`);
     document.querySelector(':root').style.setProperty('--text-color', `hsl(${event.currentTarget.color - 180}, 100%, 50%)`);
     localStorage.setItem(localStorageItem, event.currentTarget.color);
+    setResetButtonVisibility('visible');
 }
 
 /**
@@ -52,4 +53,13 @@ const resetPreferences = () => {
     localStorage.removeItem(localStorageItem);
     document.querySelector(':root').style.setProperty('--bckg', `hsl(195, 5%, 15%)`);
     document.querySelector(':root').style.setProperty('--text-color', `hsl(0, 0%, 100%)`);
+    setResetButtonVisibility('hidden');
+}
+
+/**
+ * Set whether the reset button should be visible or not.
+ * @param state
+ */
+const setResetButtonVisibility = (state) => {
+    document.querySelector('#reset-button').style.setProperty('visibility', state);
 }
