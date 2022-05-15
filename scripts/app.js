@@ -51,8 +51,8 @@ const setSavedPreferences = () => {
  */
 const resetPreferences = () => {
     localStorage.removeItem(localStorageItem);
-    document.querySelector(':root').style.setProperty('--bckg', `hsl(195, 5%, 15%)`);
-    document.querySelector(':root').style.setProperty('--text-color', `hsl(0, 0%, 100%)`);
+    document.querySelector(':root').style.setProperty('--bckg', 'hsl(195, 5%, 15%)');
+    document.querySelector(':root').style.setProperty('--text-color', 'hsl(0, 0%, 100%)');
     setResetButtonVisibility('hidden');
 }
 
