@@ -19,7 +19,7 @@
     top: 0;
     right: 5px;
     visibility: hidden;
-    font-size: 1.75em;
+    font-size: 2em;
     background: none;
     color: var(--text-color);
     cursor: pointer;
@@ -51,7 +51,7 @@ main {
 
 .actions {
     max-width: 350px;
-    margin: 5% auto;
+    margin: 3% auto;
     display: flex;
     justify-content: space-evenly;
     transition: none;
