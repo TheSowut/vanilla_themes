@@ -25,8 +25,9 @@ const addSubscriptions = () => {
  * @param event
  */
 const setColor = (event) => {
+    const complementaryColor = calculateComplementaryColor(event.currentTarget.color);
     document.querySelector(':root').style.setProperty('--bckg', `hsl(${event.currentTarget.color}, 100%, 50%)`);
-    document.querySelector(':root').style.setProperty('--text-color', `hsl(${event.currentTarget.color - 180}, 100%, 50%)`);
+    document.querySelector(':root').style.setProperty('--text-color', `hsl(${complementaryColor}, 100%, 50%)`);
     localStorage.setItem(localStorageItem, event.currentTarget.color);
     setResetButtonVisibility('visible');
 }
@@ -62,4 +63,13 @@ const resetPreferences = () => {
  */
 const setResetButtonVisibility = (state) => {
     document.querySelector('#reset-button').style.setProperty('visibility', state);
+}
+
+/**
+ * Calculate the complementary of a hue.
+ * @param color
+ * @returns complementary color
+ */
+const calculateComplementaryColor = (color) => {
+    return color - 180 > 0 ? color - 180 : +color + 180;
 }
